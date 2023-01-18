@@ -10,7 +10,7 @@ No one wants to see the same trick twice.
 
 Copy this repository into the plugin folder of your reveal.js presentation, i.e. ```plugin/reveal-onetimer```.
 
-Add the plugin to the Reveal initialization of your presentation, as shown:
+Source the onetimer.js plugin and add the plugin to the Reveal initialization of your presentation, as shown:
 
 ### reveal 4.x
 
@@ -41,7 +41,7 @@ final state of each fragment on the previous slide, without stepping
 backwards through each fragment's transition.  Slide mode is the default.
 
 Immediate mode removes the "fragment" class on each fragment within a slide 
-immediately when the fragment transition occurs.  
+immediately when the fragment transition occurs. 
 Navigating backwards within a slide will go to the previous slide, bypassing 
 stepping through any previous fragment transitions.  Immediate mode is enabled 
 by a specifying a 'oneTimer' object in the Reveal.initalize() method, as 
@@ -50,8 +50,8 @@ shown in the Installation section above.
 
 ## Demo
 
-Two demo files are included (demo_slide_mode.html and demo_immediate_mode.html).  Copy
-these into the top level Reveal.js distribution, and be sure to install the onetimer.js
+Two demo files are included (```demo_slide_mode.html``` and ```demo_immediate_mode.html```).  Copy
+these into the top level of your Reveal.js distribution, and be sure to install the onetimer.js
 plugin into the plugin/ directory.  
 
 
