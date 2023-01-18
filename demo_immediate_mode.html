@@ -1,0 +1,87 @@
+<!doctype html>
+
+<!-- Unpack the reveal distribution, Install reveal-onetimer in the reveal/plugin directory. -->
+<!-- Copy this file to the top level reveal directory, and open. -->
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal-onetimer Demo, Immediate Mode</title>
+
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section><h3>OneTimer - Immediate Mode</h3>
+                                   <p style="transform:scale(0.7)">In immediate mode (set by configuration), fragments are fixed immediately, even in the current slide.
+                                       See the Reveal.initialize() method in this page.</p>
+                                   <p style="transform:scale(0.7)">Press space or right-arrow to continue...</p>
+                                </section>
+
+                                <section><p>Fragment fade in, out, etc.</p>
+                                    <p class="fragment"> fade-in </p>
+                                    <p class="fragment fade-out"> fade-out </p>
+                                    <p class="fragment fade-in-then-out"> fade-in-then-out </p>
+                                    <p class="fragment fade-in-then-semi-out"> fade-in-then-semi-out </p>
+                                    <p style="transform:scale(0.7)" class="fragment">End of this slide, try navigating backwards, go forward when ready... </p>
+                                </section>
+
+                                <section><p>Fragment fade up, down, left, right.</p>
+                                    <p class="fragment fade-up"> fade-up </p>
+                                    <p class="fragment fade-down"> fade-down </p>
+                                    <p class="fragment fade-left"> fade-left </p>
+                                    <p class="fragment fade-right"> fade-right </p>
+                                    <p style="transform:scale(0.7)" class="fragment">End of this slide, try navigating backwards, go forward when ready... </p>
+                                </section>
+
+                                <section><p>Other fragment effects: grow, shrink, strike, etc.</p>
+                                    <p class="fragment grow"> grow </p>
+                                    <p class="fragment shrink"> shrink </p>
+                                    <p class="fragment semi-fade-out"> semi-fade-out </p>
+                                    <p class="fragment strike"> strike </p>
+                                    <p class="fragment highlight-red"> highlight-red (green, blue) </p>
+                                    <p class="fragment highlight-current-green">  highlight-current-green (red,blue) </p>
+                                    <p style="transform:scale(0.7)" class="fragment">End of this slide, try navigating backwards, go forward when ready... </p>
+                                </section>
+
+				<section><p>Last slide</p>
+                                    <p style="transform:scale(0.7)">Now, if you navigate backwards in this deck, all fragments are static.</p>
+                                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+
+                <!-- INCLUDE reveal-onetimer PLUGIN -->
+                <script src="plugin/reveal-onetimer/onetimer.js"></script>
+
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+
+                        // INCLUDE OneTimer AS A PLUGIN
+			Reveal.initialize({
+				hash: true,
+
+                                // enable ontimer immediate mode:
+                                oneTimer: {immediateMode: true},        // optional, default is 'false'
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, OneTimer ]
+			});
+		</script>
+	</body>
+</html>
